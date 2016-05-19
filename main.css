@@ -1,5 +1,85 @@
 
+body {
+	width: 70%;
+	margins: auto;
+}
+
 header {
 	background-color: #ffb4b0;
 	border: 1px solid black;
+	margin: 10px 0px;
+}
+
+header ul li {
+	display: inline;
+	border-left: 2px solid black;
+	padding: 0 0 0 5px;
+	margin: 0 2.5px;
+}
+
+header li:first-child {
+	border: none;
+}
+
+label {
+	display: block;
+}
+
+.options {
+	background-color: #4DD7FA;
+	width: 30%;
+	border: 1px solid black;
+	margin: 0 1px 0 0;
+	float: left;
+	display: inline-block;
+	vertical-align: top;
+
+}
+
+fieldset {
+	border: none;
+	margin:7px 0 0 0;
+}
+
+fieldset option {
+	/*width: 90%;*/
+}
+
+fieldset input {
+	margin: 2px 0 2px 0;
+	padding: 2px 0;
+}
+
+.songs {
+	float:right;
+	width: 67%;
+	margin: 0 0 0 0;
+	background-color: #FEFAC0;
+	border: 1px solid black;
+	vertical-align: top;
+}
+
+h2 {
+	color: #785616;
+}
+
+li {
+	list-style-type: none;
+}
+
+.infolist {
+	display: inline;
+	border-left: 2px solid black;
+	padding: 0 0 0 5px;
+	margin: 0 2.5px;
+}
+
+.infolist:nth-child(2){
+	border: none;
+}
+
+button {
+	margin: 0 35px;
+	padding: 0 35px;
+	text-align: center;
 }
