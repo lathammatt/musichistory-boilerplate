@@ -8,92 +8,92 @@
 </head>
 
 <body>
-    <header>
-        <ul>
-            <li>View Music</li>
-            <li><a href="#">Add Music</a></li>
-            <li><a href="#">Profile</a></li>
-        </ul>
-    </header>
-    <div class="options">
-        <fieldset>
-            <legend>Song Length:</legend>
-                <input type="range" name="songlength" min="30" max="300" step="5"value="150" placeholder="">
-        </fieldset>
-        <fieldset class="artistalbum">
-            <label for="artist">Artist:</label>
-            <select name="artist">
-                <option value="value1">Options</option>
-                <option value="value2">Bruce</option>
-                <option value="value3">Bob</option>
-                <option value="value4">Billy</option>
-                <option value="value5">Barbara</option>
-                <option value="value6">Bubba</option>
-            </select>
-        </fieldset>
-        <fieldset class="artistalbum">
-            <label for="album">Album:</label>
-            <select name="album">
-                <option value="value1">Options</option>
-                <option value="value2">Born</option>
-                <option value="value3">Bullet</option>
-                <option value="value4">Bridge</option>
-                <option value="value5">Butterfly</option>
-                <option value="value6">Bucknekkid</option>
-            </select>
-        </fieldset>
-        <fieldset class="artistalbum">
-            <label for="genre">Genre:</label>
-            <div class="checks">
-            <input type="checkbox" name="genre" value="Rock">Rock
-            <input type="checkbox" name="genre" value="Classical">Classical
+    <div class="main">
+        <header>
+            <ul>
+                <li>View Music</li>
+                <li><a href="#">Add Music</a></li>
+                <li><a href="#">Profile</a></li>
+            </ul>
+        </header>
+        <div class="options">
+            <fieldset>
+                <legend>Song Length:</legend>
+                    <input type="range" name="songlength" min="30" max="300" step="5"value="150" placeholder="">
+            </fieldset>
+            <fieldset class="artistalbum">
+                <label for="artist">Artist:</label>
+                <select name="artist">
+                    <option value="value1">Options</option>
+                    <option value="value2">Bruce</option>
+                    <option value="value3">Bob</option>
+                    <option value="value4">Billy</option>
+                    <option value="value5">Barbara</option>
+                    <option value="value6">Bubba</option>
+                </select>
+            </fieldset>
+            <fieldset class="artistalbum">
+                <label for="album">Album:</label>
+                <select name="album">
+                    <option value="value1">Options</option>
+                    <option value="value2">Born</option>
+                    <option value="value3">Bullet</option>
+                    <option value="value4">Bridge</option>
+                    <option value="value5">Butterfly</option>
+                    <option value="value6">Bucknekkid</option>
+                </select>
+            </fieldset>
+            <fieldset class="artistalbum">
+                <label for="genre">Genre:</label>
+                <div class="checks">
+                    <div class="internal"><input type="checkbox" name="genre" value="Rock">Rock</div>
+                    <div class="internal"><input type="checkbox" name="genre" value="Pop">Pop</div>
+                    <div class="internal"><input type="checkbox" name="genre" value="Blues">Blues</div>
+                </div>
+                <div class="checks2">
+                    <div class="internal"><input type="checkbox" name="genre" value="Classical">Classical</div>
+                    <div class="internal"><input type="checkbox" name="genre" value="Jazz">Jazz</div>
+                    <div class="internal"><input type="checkbox" name="genre" value="Hip Hop">Hip Hop</div>
+                </div>
+            </fieldset>
+            <fieldset>
+                <button type="filter"><h3>Filter</h3></button>
+            </fieldset>
+        </div>
+        <div class="songs">
+            <div>
+                <ul>
+                    <li><h2>Song Name</h2></li>
+                    <li class="infolist">Artist Name</li>
+                    <li class="infolist">Album Name</li>
+                    <li class="infolist">Genre</li>
+                </ul>
             </div>
-            <div class="checks2">
-            <input type="checkbox" name="genre" value="Pop">Pop
-            <input type="checkbox" name="genre" value="Jazz">Jazz
+            <div>
+                <ul>
+                    <li><h2>Song Name</h2></li>
+                    <li class="infolist">Artist Name</li>
+                    <li class="infolist">Album Name</li>
+                    <li class="infolist">Genre</li>
+                </ul>
             </div>
-            <div class="checks3">
-            <input type="checkbox" name="genre" value="Blues">Blues
-            <input type="checkbox" name="genre" value="Hip Hop">Hip Hop
+            <div>
+                <ul>
+                    <li><h2>Song Name</h2></li>
+                    <li class="infolist">Artist Name</li>
+                    <li class="infolist">Album Name</li>
+                    <li class="infolist">Genre</li>
+                </ul>
             </div>
-        </fieldset>
-        <fieldset>
-            <button type="filter"><h3>Filter</h3></button>
-        </fieldset>
-    </div>
-    <div class="songs">
-        <div>
-            <ul>
-                <li><h2>Song Name</h2></li>
-                <li class="infolist">Artist Name</li>
-                <li class="infolist">Album Name</li>
-                <li class="infolist">Genre</li>
-            </ul>
+            <div>
+                <ul>
+                    <li><h2>Song Name</h2></li>
+                    <li class="infolist">Artist Name</li>
+                    <li class="infolist">Album Name</li>
+                    <li class="infolist">Genre</li>
+                </ul>
+            </div>
         </div>
-        <div>
-            <ul>
-                <li><h2>Song Name</h2></li>
-                <li class="infolist">Artist Name</li>
-                <li class="infolist">Album Name</li>
-                <li class="infolist">Genre</li>
-            </ul>
-        </div>
-        <div>
-            <ul>
-                <li><h2>Song Name</h2></li>
-                <li class="infolist">Artist Name</li>
-                <li class="infolist">Album Name</li>
-                <li class="infolist">Genre</li>
-            </ul>
-        </div>
-        <div>
-            <ul>
-                <li><h2>Song Name</h2></li>
-                <li class="infolist">Artist Name</li>
-                <li class="infolist">Album Name</li>
-                <li class="infolist">Genre</li>
-            </ul>
-        </div>
-    </div>
+    </div>    
 </body>
 </html>

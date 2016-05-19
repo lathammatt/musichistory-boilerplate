@@ -1,7 +1,7 @@
 
-body {
+.main {
 	width: 70%;
-	margins: auto;
+	margin: auto;
 }
 
 header {
@@ -31,9 +31,7 @@ label {
 	border: 1px solid black;
 	margin: 0 1px 0 0;
 	float: left;
-	display: inline-block;
-	vertical-align: top;
-
+	height: 361.25px;
 }
 
 fieldset {
@@ -55,8 +53,9 @@ fieldset input {
 	width: 67%;
 	margin: 0 0 0 0;
 	background-color: #FEFAC0;
+	height: 361.25px;
 	border: 1px solid black;
-	vertical-align: top;
+
 }
 
 h2 {
@@ -82,4 +81,19 @@ button {
 	margin: 0 35px;
 	padding: 0 35px;
 	text-align: center;
+}
+
+.checks {
+	width: 50%;
+	float: left;
+}
+
+.checks2 {
+	width: 50%;
+	float: right;
+}
+
+.internal {
+	width:100%;
+	margin: 5px 0;
 }
