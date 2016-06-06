@@ -31,7 +31,7 @@ label {
 	border: 1px solid black;
 	margin: 0 1px 0 0;
 	float: left;
-	height: 361.25px;
+	/*height: 361.25px;*/
 }
 
 fieldset {
@@ -53,8 +53,8 @@ fieldset input {
 	width: 67%;
 	margin: 0 0 0 0;
 	background-color: #FEFAC0;
-	height: 361.25px;
-	border: 1px solid black;
+/*	height: 361.25px;
+*/	border: 1px solid black;
 
 }
 
