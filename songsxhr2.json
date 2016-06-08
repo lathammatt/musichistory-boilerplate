@@ -1,0 +1,25 @@
+{
+	"songs":[
+	{
+      "title": "Welcome to the Jungle",
+      "artist": "Guns & Roses",
+      "album": "Appetite for Destruction"
+    },
+    {
+      "title": "Ironic",
+      "artist": "Alanis Morisette",
+      "album": "Jagged Little Pill"
+    },
+    {
+      "title": "Jeremy",
+      "artist": "Pearl Jam",
+      "album": "Ten"
+    },
+    {
+      "title": "Stairway to Heaven",
+      "artist": "Led Zeppelin",
+      "album": "Led Zeppelin IV"
+    }
+
+	]
+}
