@@ -97,3 +97,9 @@ button {
 	width:100%;
 	margin: 5px 0;
 }
+
+#more {
+	float: right;
+	padding: 7px;
+	margin: 5px;
+}
