@@ -69,19 +69,34 @@ addButt.addEventListener("click", function(){
 	obj.title = tune.value;
 	obj.artist = band.value;
 	obj.album = disc.value;
-	console.log("obj", obj);
 	music.push(obj);
-	console.log("music", music);
 	userAdds.songs = music;
-	console.log("final", userAdds);
 	tune.value = "";
 	band.value = "";
 	disc.value = "";
+	applyInfo(userAdds);
 });
 
 var home = document.getElementById("link-home");
 var add = document.getElementById("link-add");
+var homeview = document.getElementById("list-view");
+var addview = document.getElementById("add-view");
 
+home.addEventListener("click", function(event){
+	event.preventDefault();
+	homeview.classList.add("visible");
+	homeview.classList.remove("hidden");
+	addview.classList.add("hidden");
+	addview.classList.remove("visible");
+});
+
+add.addEventListener("click", function(event){
+	event.preventDefault();
+	addview.classList.add("visible");
+	addview.classList.remove("hidden");
+	homeview.classList.add("hidden");
+	homeview.classList.remove("visible");
+});
 
 
 
