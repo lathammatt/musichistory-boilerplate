@@ -9,7 +9,6 @@
 </head>
 
 <body>
-<!-- List Music View, list music and add music links in nav bar -->
     <div class="main">
         <header>
             <ul>
@@ -18,69 +17,66 @@
                 <li><a href="#" id="link-profile">Profile</a></li>
             </ul>
         </header>
-        <section id="list-view" class="hidden">
-            
-        <div class="options">
-            <fieldset>
-                <legend>Song Length:</legend>
-                    <input type="range" name="songlength" min="30" max="300" step="5" value="150" placeholder="">
-            </fieldset>
-            <fieldset class="artistalbum">
-                <label for="artist">Artist:</label>
-                <select name="artist">
-                    <option value="value1">Options</option>
-                    <option value="value2">Bruce</option>
-                    <option value="value3">Bob</option>
-                    <option value="value4">Billy</option>
-                    <option value="value5">Barbara</option>
-                    <option value="value6">Bubba</option>
-                </select>
-            </fieldset>
-            <fieldset class="artistalbum">
-                <label for="album">Album:</label>
-                <select name="album">
-                    <option value="value1">Options</option>
-                    <option value="value2">Born</option>
-                    <option value="value3">Bullet</option>
-                    <option value="value4">Bridge</option>
-                    <option value="value5">Butterfly</option>
-                    <option value="value6">Bucknekkid</option>
-                </select>
-            </fieldset>
-            <fieldset class="artistalbum">
-                <label for="genre">Genre:</label>
-                <div class="checks">
-                    <div class="internal"><input type="checkbox" name="genre" value="Rock">Rock</div>
-                    <div class="internal"><input type="checkbox" name="genre" value="Pop">Pop</div>
-                    <div class="internal"><input type="checkbox" name="genre" value="Blues">Blues</div>
-                </div>
-                <div class="checks2">
-                    <div class="internal"><input type="checkbox" name="genre" value="Classical">Classical</div>
-                    <div class="internal"><input type="checkbox" name="genre" value="Jazz">Jazz</div>
-                    <div class="internal"><input type="checkbox" name="genre" value="Hip Hop">Hip Hop</div>
-                </div>
-            </fieldset>
-            <fieldset>
-                <button type="filter"><h3>Filter</h3></button>
-            </fieldset>
-        </div>
-        <div class="songs" id = "songList">
-            <button type="select" id="more">More > </button>
-        </div>
+        <section id="list-view" class="">
+            <div class="options">
+                <fieldset>
+                    <legend>Song Length:</legend>
+                        <input type="range" name="songlength" min="30" max="300" step="5" value="150" placeholder="">
+                </fieldset>
+                <fieldset class="artistalbum">
+                    <label for="artist">Artist:</label>
+                    <select name="artist">
+                        <option value="value1">Options</option>
+                        <option value="value2">Bruce</option>
+                        <option value="value3">Bob</option>
+                        <option value="value4">Billy</option>
+                        <option value="value5">Barbara</option>
+                        <option value="value6">Bubba</option>
+                    </select>
+                </fieldset>
+                <fieldset class="artistalbum">
+                    <label for="album">Album:</label>
+                    <select name="album">
+                        <option value="value1">Options</option>
+                        <option value="value2">Born</option>
+                        <option value="value3">Bullet</option>
+                        <option value="value4">Bridge</option>
+                        <option value="value5">Butterfly</option>
+                        <option value="value6">Bucknekkid</option>
+                    </select>
+                </fieldset>
+                <fieldset class="artistalbum">
+                    <label for="genre">Genre:</label>
+                    <div class="checks">
+                        <div class="internal"><input type="checkbox" name="genre" value="Rock">Rock</div>
+                        <div class="internal"><input type="checkbox" name="genre" value="Pop">Pop</div>
+                        <div class="internal"><input type="checkbox" name="genre" value="Blues">Blues</div>
+                    </div>
+                    <div class="checks2">
+                        <div class="internal"><input type="checkbox" name="genre" value="Classical">Classical</div>
+                        <div class="internal"><input type="checkbox" name="genre" value="Jazz">Jazz</div>
+                        <div class="internal"><input type="checkbox" name="genre" value="Hip Hop">Hip Hop</div>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <button type="filter"><h3>Filter</h3></button>
+                </fieldset>
+            </div>
+            <div class="songs" id = "songList">
+                <button type="select" id="more">More > </button>
+            </div>
         </section>
-        <div id="newstuff">
-            <!--Hidden Add Music view 
-            user input - song name, artist, album
-            Add button 
-            collects input, adds to json, updates to List View-->
-            <label for="">Song</label>
-            <input type="text" name="song" id="song" value="" placeholder="">
-            <label for="">Artist</label>
-            <input type="text" name="artist" id="artist" value="" placeholder="">
-            <label for="">Album</label>
-            <input type="text" name="album" id="album" value="" placeholder="">
-            <button type="submit" id="addit">Add</button>
-        </div>
+        <section id="add-view" class="hidden">
+            <div class="newbox">
+                <label for="">Song</label>
+                <input type="text" name="song" id="song" value="" placeholder="">
+                <label for="">Artist</label>
+                <input type="text" name="artist" id="artist" value="" placeholder="">
+                <label for="">Album</label>
+                <input type="text" name="album" id="album" value="" placeholder="">
+                <button type="submit" id="addit">Add</button>
+            </div>
+        </section>
     </div>    
 </body>
 </html>
