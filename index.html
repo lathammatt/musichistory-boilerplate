@@ -18,12 +18,12 @@
                 <li><a href="#" id="link-profile">Profile</a></li>
             </ul>
         </header>
-        <section id="list-view" id="hidden">
+        <section id="list-view" class="hidden">
             
         <div class="options">
             <fieldset>
                 <legend>Song Length:</legend>
-                    <input type="range" name="songlength" min="30" max="300" step="5"value="150" placeholder="">
+                    <input type="range" name="songlength" min="30" max="300" step="5" value="150" placeholder="">
             </fieldset>
             <fieldset class="artistalbum">
                 <label for="artist">Artist:</label>
@@ -68,11 +68,18 @@
             <button type="select" id="more">More > </button>
         </div>
         </section>
-        <div>
+        <div id="newstuff">
             <!--Hidden Add Music view 
             user input - song name, artist, album
             Add button 
             collects input, adds to json, updates to List View-->
+            <label for="">Song</label>
+            <input type="text" name="song" id="song" value="" placeholder="">
+            <label for="">Artist</label>
+            <input type="text" name="artist" id="artist" value="" placeholder="">
+            <label for="">Album</label>
+            <input type="text" name="album" id="album" value="" placeholder="">
+            <button type="submit" id="addit">Add</button>
         </div>
     </div>    
 </body>
