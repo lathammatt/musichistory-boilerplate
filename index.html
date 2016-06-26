@@ -9,14 +9,17 @@
 </head>
 
 <body>
+<!-- List Music View, list music and add music links in nav bar -->
     <div class="main">
         <header>
             <ul>
-                <li>View Music</li>
-                <li><a href="#">Add Music</a></li>
-                <li><a href="#">Profile</a></li>
+                <li><a href="*" id="link-home">List Music</li>
+                <li><a href="#" id="link-add">Add Music</a></li>
+                <li><a href="#" id="link-profile">Profile</a></li>
             </ul>
         </header>
+        <section id="list-view" id="hidden">
+            
         <div class="options">
             <fieldset>
                 <legend>Song Length:</legend>
@@ -63,38 +66,13 @@
         </div>
         <div class="songs" id = "songList">
             <button type="select" id="more">More > </button>
-<!--             <div>
-                <ul>
-                    <li><h2>Song Name</h2></li>
-                    <li class="infolist">Artist Name</li>
-                    <li class="infolist">Album Name</li>
-                    <li class="infolist">Genre</li>
-                </ul>
-            </div>
-            <div>
-                <ul>
-                    <li><h2>Song Name</h2></li>
-                    <li class="infolist">Artist Name</li>
-                    <li class="infolist">Album Name</li>
-                    <li class="infolist">Genre</li>
-                </ul>
-            </div>
-            <div>
-                <ul>
-                    <li><h2>Song Name</h2></li>
-                    <li class="infolist">Artist Name</li>
-                    <li class="infolist">Album Name</li>
-                    <li class="infolist">Genre</li>
-                </ul>
-            </div>
-            <div>
-                <ul>
-                    <li><h2>Song Name</h2></li>
-                    <li class="infolist">Artist Name</li>
-                    <li class="infolist">Album Name</li>
-                    <li class="infolist">Genre</li>
-                </ul>
-            </div> -->
+        </div>
+        </section>
+        <div>
+            <!--Hidden Add Music view 
+            user input - song name, artist, album
+            Add button 
+            collects input, adds to json, updates to List View-->
         </div>
     </div>    
 </body>
