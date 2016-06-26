@@ -103,3 +103,10 @@ button {
 	padding: 7px;
 	margin: 5px;
 }
+
+/*hidden versus active*/
+
+.hidden {
+	display: none;
+	
+}
