@@ -2,36 +2,13 @@ $(document).ready(function() {
 
 "use strict";
 
-	// var xhr = new XMLHttpRequest();
-
-	// xhr.addEventListener("load", loadedFile);
-	// xhr.addEventListener("failed", failedFile);
-	// xhr.open("GET", "songxhr.json");
-	// xhr.send();
-	// 
 	$.ajax({url:"songxhr.json"}).done(applyInfo);
-
-	// function loadedFile(){
-	// 	console.log("file loaded");
-	// 	var firstList = JSON.parse(xhr.responseText);
-	// 	applyInfo(firstList);
-	// }
-
-	// function failedFile(){
-	// 	console.log("file failed");
-	// }
-
-	// var secondxhr = new XMLHttpRequest();
-	// secondxhr.addEventListener("load", console.log("loaded"));
-	// secondxhr.addEventListener("failed", failedFile);
-	// secondxhr.open("GET", "songsxhr2.json");
-	// secondxhr.send();
 
 	$("#more").click(function moreButton (){
 		$.ajax({url:"songsxhr2.json"}).done(applyInfo);
 	});
 
-	var songInfo = $("#songList");
+	var songInfo = document.getElementById("songList");
 
 	var counter = 0;
 
@@ -47,22 +24,22 @@ $(document).ready(function() {
 			var newAttr = document.createAttribute('id');
 			newAttr.value = "cardwrapper-" + `${counter}`;
 			newDiv.setAttributeNode(newAttr);
-			songInfo.append(newDiv);
+			songInfo.appendChild(newDiv);
 
-			// var deleDiv = $("#card-" + [counter]);
-			$("#card-" + [counter]).click(function deleteCard(event){
+			var deleDiv = document.getElementById("card-" + [counter]);
+			deleDiv.addEventListener("click", function deleteCard(event){
 				var clickedbtn = event.target.id.split("-")[1];
-				var cardtodelete = $("#cardwrapper-" + `${clickedbtn}`);
-				songInfo.remove(cardtodelete);
+				var cardtodelete = document.getElementById("cardwrapper-" + `${clickedbtn}`);
+				songInfo.removeChild(cardtodelete);
 			});
 
 		}
 	}
 
 	var userAdds = {};
-	var tune = $("#song");
-	var band = $("#artist");
-	var disc = $("#album");
+	var tune = document.getElementById("song");
+ 	var band = document.getElementById("artist");
+ 	var disc = document.getElementById("album");
 	// var addButt = $("#addit");
 
 	$("#addit").click(function(){
@@ -79,10 +56,6 @@ $(document).ready(function() {
 		applyInfo(userAdds);
 	});
 
-	// var home = $("#link-home");
-	// var add = $("#link-add");
-	// var homeview = $("#list-view");
-	// var addview = $("#add-view");
 
 	$("#link-home").click(function(event){
 		event.preventDefault();
