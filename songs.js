@@ -1,103 +1,105 @@
-var xhr = new XMLHttpRequest();
+$(document).ready(function() {
 
-xhr.addEventListener("load", loadedFile)
-xhr.addEventListener("failed", failedFile)
-xhr.open("GET", "songxhr.json");
-xhr.send();
+"use strict";
 
-function loadedFile(){
-	console.log("file loaded");
-	var firstList = JSON.parse(xhr.responseText);
-	applyInfo(firstList);
-};
+	// var xhr = new XMLHttpRequest();
 
-function failedFile(){
-	console.log("file failed");
-};
+	// xhr.addEventListener("load", loadedFile);
+	// xhr.addEventListener("failed", failedFile);
+	// xhr.open("GET", "songxhr.json");
+	// xhr.send();
+	// 
+	$.ajax({url:"songxhr.json"}).done(applyInfo);
 
-var secondxhr = new XMLHttpRequest();
-secondxhr.addEventListener("load", console.log("loaded"));
-secondxhr.addEventListener("failed", failedFile);
-secondxhr.open("GET", "songsxhr2.json");
-secondxhr.send();
+	// function loadedFile(){
+	// 	console.log("file loaded");
+	// 	var firstList = JSON.parse(xhr.responseText);
+	// 	applyInfo(firstList);
+	// }
 
-var moreButt = document.getElementById("more");
-moreButt.addEventListener("click", moreButton);
+	// function failedFile(){
+	// 	console.log("file failed");
+	// }
 
-function moreButton (){
-	var secondList = JSON.parse(secondxhr.responseText);
-	applyInfo(secondList)
-};
+	// var secondxhr = new XMLHttpRequest();
+	// secondxhr.addEventListener("load", console.log("loaded"));
+	// secondxhr.addEventListener("failed", failedFile);
+	// secondxhr.open("GET", "songsxhr2.json");
+	// secondxhr.send();
 
-var songInfo = document.getElementById("songList");
+	$("#more").click(function moreButton (){
+		$.ajax({url:"songsxhr2.json"}).done(applyInfo);
+	});
 
-var counter = 0;
+	var songInfo = $("#songList");
 
-function applyInfo (object){
-	console.log("object", object);
-	for (var i = 0; i < object.songs.length; i++){
-		counter++;
-		var songbox = `<div class="cards"><ul><li><h2>${object.songs[i].title} </h2></li><li class='infolist'>${object.songs[i].artist}</li><li class='infolist'>${object.songs[i].album}</li><button id="card-${counter}">Delete</button></div>`;
+	var counter = 0;
 
-		var newDiv = document.createElement('article');
-		newDiv.innerHTML = songbox;
+	function applyInfo (object){
+		console.log("object", object);
+		for (var i = 0; i < object.songs.length; i++){
+			counter++;
+			var songbox = `<div class="cards"><ul><li><h2>${object.songs[i].title} </h2></li><li class='infolist'>${object.songs[i].artist}</li><li class='infolist'>${object.songs[i].album}</li><button id="card-${counter}">Delete</button></div>`;
 
-		var newAttr = document.createAttribute('id');
-		newAttr.value = "cardwrapper-" + `${counter}`;
-		newDiv.setAttributeNode(newAttr);
-		songInfo.appendChild(newDiv);
+			var newDiv = document.createElement('article');
+			newDiv.innerHTML = songbox;
 
-		var deleDiv = document.getElementById("card-" + [counter]);
-		deleDiv.addEventListener("click", function deleteCard(event){
-			var clickedbtn = event.target.id.split("-")[1];
-			var cardtodelete = document.getElementById("cardwrapper-" + `${clickedbtn}`);
-			songInfo.removeChild(cardtodelete);
-		});
+			var newAttr = document.createAttribute('id');
+			newAttr.value = "cardwrapper-" + `${counter}`;
+			newDiv.setAttributeNode(newAttr);
+			songInfo.append(newDiv);
 
-	};
-};
+			// var deleDiv = $("#card-" + [counter]);
+			$("#card-" + [counter]).click(function deleteCard(event){
+				var clickedbtn = event.target.id.split("-")[1];
+				var cardtodelete = $("#cardwrapper-" + `${clickedbtn}`);
+				songInfo.remove(cardtodelete);
+			});
 
-var userAdds = {};
-var tune = document.getElementById("song");
-var band = document.getElementById("artist");
-var disc = document.getElementById("album");
-var addButt = document.getElementById("addit");
+		}
+	}
 
-addButt.addEventListener("click", function(){
-	var music = [];
-	var obj = {};
-	obj.title = tune.value;
-	obj.artist = band.value;
-	obj.album = disc.value;
-	music.push(obj);
-	userAdds.songs = music;
-	tune.value = "";
-	band.value = "";
-	disc.value = "";
-	applyInfo(userAdds);
+	var userAdds = {};
+	var tune = $("#song");
+	var band = $("#artist");
+	var disc = $("#album");
+	// var addButt = $("#addit");
+
+	$("#addit").click(function(){
+		var music = [];
+		var obj = {};
+		obj.title = tune.value;
+		obj.artist = band.value;
+		obj.album = disc.value;
+		music.push(obj);
+		userAdds.songs = music;
+		tune.value = "";
+		band.value = "";
+		disc.value = "";
+		applyInfo(userAdds);
+	});
+
+	// var home = $("#link-home");
+	// var add = $("#link-add");
+	// var homeview = $("#list-view");
+	// var addview = $("#add-view");
+
+	$("#link-home").click(function(event){
+		event.preventDefault();
+		$("#list-view").addClass("visible");
+		$("#list-view").removeClass("hidden");
+		$("#add-view").addClass("hidden");
+		$("#add-view").removeClass("visible");
+	});
+
+	$("#link-add").click(function(event){
+		event.preventDefault();
+		$("#add-view").addClass("visible");
+		$("#add-view").removeClass("hidden");
+		$("#list-view").addClass("hidden");
+		$("#list-view").removeClass("visible");
+	});
+
 });
-
-var home = document.getElementById("link-home");
-var add = document.getElementById("link-add");
-var homeview = document.getElementById("list-view");
-var addview = document.getElementById("add-view");
-
-home.addEventListener("click", function(event){
-	event.preventDefault();
-	homeview.classList.add("visible");
-	homeview.classList.remove("hidden");
-	addview.classList.add("hidden");
-	addview.classList.remove("visible");
-});
-
-add.addEventListener("click", function(event){
-	event.preventDefault();
-	addview.classList.add("visible");
-	addview.classList.remove("hidden");
-	homeview.classList.add("hidden");
-	homeview.classList.remove("visible");
-});
-
-
 
 
