@@ -1,23 +1,22 @@
 "use strict";
 
-var home = document.getElementById("link-home");
-var add = document.getElementById("link-add");
-var homeview = document.getElementById("list-view");
-var addview = document.getElementById("add-view");
+$(document).ready(function() {
 
-home.addEventListener("click", function(event){
-	event.preventDefault();
-	homeview.classList.add("visible");
-	homeview.classList.remove("hidden");
-	addview.classList.add("hidden");
-	addview.classList.remove("visible");
-});
 
-add.addEventListener("click", function(event){
-	event.preventDefault();
-	addview.classList.add("visible");
-	addview.classList.remove("hidden");
-	homeview.classList.add("hidden");
-	homeview.classList.remove("visible");
+	$("#link-home").click(function(event){
+		event.preventDefault();
+		$("#list-view").addClass("visible");
+		$("#list-view").removeClass("hidden");
+		$("#add-view").addClass("hidden");
+		$("#add-view").removeClass("visible");
+	});
+
+	$("#link-add").click(function(event){
+		event.preventDefault();
+		$("#add-view").addClass("visible");
+		$("#add-view").removeClass("hidden");
+		$("#list-view").addClass("hidden");
+		$("#list-view").removeClass("visible");
+	});
 
 });
