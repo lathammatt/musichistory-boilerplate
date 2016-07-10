@@ -56,6 +56,14 @@ function applyInfo (object){
 			songInfo.removeChild(cardtodelete);
 		});
 
+		var artistList = document.getElementById("artist");
+
+		var artistNames = `<option value="${object.songs[i].artist}">${object.songs[i].artist}</option>`;
+
+		var albumList = document.getElementById("album");
+
+		var albumNames = `<option value="${object.songs[i].album}">${object.songs[i].album}</option>`;
+
 	}
 }
 function userEntry(){
@@ -86,3 +94,5 @@ module.exports = loadedFile, moreButton, userEntry;
 
 
 // one method for getting the entire list of songs, and one method for adding a song to the array
+
+
