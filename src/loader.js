@@ -1,35 +1,47 @@
 "use strict";
 
-var xhr = new XMLHttpRequest();
+var loadedFile = function (){
+	$.ajax({url:"songxhr.json"}).done(applyInfo);
+};
 
-xhr.addEventListener("load", loadedFile);
-xhr.addEventListener("failed", failedFile);
-xhr.open("GET", "songxhr.json");
-xhr.send();
+var moreButton = function (){
+	$.ajax({url:"songsxhr2.json"}).done(applyInfo);
+};
 
-function loadedFile(){
-	console.log("file loaded");
-	var firstList = JSON.parse(xhr.responseText);
-	applyInfo(firstList);
-}
+$("#more").click(function moreButton(){});
 
-function failedFile(){
-	console.log("file failed");
-}
 
-var secondxhr = new XMLHttpRequest();
-secondxhr.addEventListener("load", console.log("loaded"));
-secondxhr.addEventListener("failed", failedFile);
-secondxhr.open("GET", "songsxhr2.json");
-secondxhr.send();
+// var xhr = new XMLHttpRequest();
 
-var moreButt = document.getElementById("more");
-moreButt.addEventListener("click", moreButton);
 
-function moreButton (){
-	var secondList = JSON.parse(secondxhr.responseText);
-	applyInfo(secondList);
-}
+// xhr.addEventListener("load", loadedFile);
+// xhr.addEventListener("failed", failedFile);
+// xhr.open("GET", "songxhr.json");
+// xhr.send();
+
+// function loadedFile(){
+// 	console.log("file loaded");
+// 	var firstList = JSON.parse(xhr.responseText);
+// 	applyInfo(firstList);
+// }
+
+// function failedFile(){
+// 	console.log("file failed");
+// }
+
+// var secondxhr = new XMLHttpRequest();
+// secondxhr.addEventListener("load", console.log("loaded"));
+// secondxhr.addEventListener("failed", failedFile);
+// secondxhr.open("GET", "songsxhr2.json");
+// secondxhr.send();
+
+// var moreButt = document.getElementById("more");
+// moreButt.addEventListener("click", moreButton);
+
+// function moreButton (){
+// 	var secondList = JSON.parse(secondxhr.responseText);
+// 	applyInfo(secondList);
+// }
 
 var songInfo = document.getElementById("songList");
 
