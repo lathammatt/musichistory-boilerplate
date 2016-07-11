@@ -26,7 +26,7 @@ var handleError = function(task) {
 };
 
 var customOpts = {
-  entries: ['./songs.js'],
+  entries: ['./src/main.js'],
   debug: true //creates readable 'source maps' of code
 };
 var opts = assign({}, watchify.args, customOpts);

@@ -1,6 +1,18 @@
 "use strict";
 
+// var loadedFile = function (){
+// 	$.ajax({url:"songxhr.json"}).done(applyInfo);
+// };
+
+// var moreButton = function (){
+// 	$.ajax({url:"songsxhr2.json"}).done(applyInfo);
+// };
+
+// $("#more").click(moreButton);
+
+
 var xhr = new XMLHttpRequest();
+
 
 xhr.addEventListener("load", loadedFile);
 xhr.addEventListener("failed", failedFile);
@@ -8,7 +20,6 @@ xhr.open("GET", "songxhr.json");
 xhr.send();
 
 function loadedFile(){
-	console.log("file loaded");
 	var firstList = JSON.parse(xhr.responseText);
 	applyInfo(firstList);
 }
@@ -66,13 +77,13 @@ function applyInfo (object){
 
 	}
 }
-function userEntry(){
 var userAdds = {};
 var tune = document.getElementById("song");
 var band = document.getElementById("artist");
 var disc = document.getElementById("album");
 var addButt = document.getElementById("addit");
 
+function userEntry(){
 addButt.addEventListener("click", function(){
 	var music = [];
 	var obj = {};
@@ -85,12 +96,13 @@ addButt.addEventListener("click", function(){
 	band.value = "";
 	disc.value = "";
 	applyInfo(userAdds);
+	console.log("adding", obj);
 });
 }
 
 module.exports = loadedFile, moreButton, userEntry;
 
-
+console.log("loader");
 
 
 // one method for getting the entire list of songs, and one method for adding a song to the array
