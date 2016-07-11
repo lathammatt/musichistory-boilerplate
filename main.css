@@ -65,7 +65,13 @@ li {
 	list-style-type: none;
 }
 
-.infolist {
+.artistinfo {
+	display: inline;
+	padding: 0 0 0 5px;
+	margin: 0 2.5px;
+}
+
+.albuminfo {
 	display: inline;
 	border-left: 2px solid black;
 	padding: 0 0 0 5px;
@@ -110,6 +116,14 @@ button {
 }
 
 .visible {
+	display: block;
+}
+
+.inactive {
+	display: none;
+}
+
+.active {
 	display: block;
 }
 

@@ -24,14 +24,14 @@
                 </fieldset>
                 <fieldset class="artistalbum">
                     <label for="artist">Artist:</label>
-                    <select name="artist" id="artistlist">
-
+                    <select name="artist" id="artistlist" class="art">
+                    <option value="0">Select Artist</option>
                     </select>
                 </fieldset>
                 <fieldset class="artistalbum">
-                    <label for="album">Album:</label>
-                    <select name="album" id="albumlist">
-
+                    <label for="album">or Album:</label>
+                    <select name="album" id="albumlist" class="al">
+                        <option value="0">Select Album</option>
                     </select>
                 </fieldset>
                 <fieldset class="artistalbum">
@@ -48,7 +48,7 @@
                     </div>
                 </fieldset>
                 <fieldset>
-                    <button type="filter"><h3>Filter</h3></button>
+                    <button type="submit" id="filter"><h3>Filter</h3></button>
                 </fieldset>
             </div>
             <div class="songs" id = "songList">
