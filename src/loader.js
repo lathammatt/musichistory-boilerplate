@@ -1,47 +1,46 @@
 "use strict";
 
-var loadedFile = function (){
-	$.ajax({url:"songxhr.json"}).done(applyInfo);
-};
+// var loadedFile = function (){
+// 	$.ajax({url:"songxhr.json"}).done(applyInfo);
+// };
 
-var moreButton = function (){
-	$.ajax({url:"songsxhr2.json"}).done(applyInfo);
-};
+// var moreButton = function (){
+// 	$.ajax({url:"songsxhr2.json"}).done(applyInfo);
+// };
 
-$("#more").click(function moreButton(){});
-
-
-// var xhr = new XMLHttpRequest();
+// $("#more").click(moreButton);
 
 
-// xhr.addEventListener("load", loadedFile);
-// xhr.addEventListener("failed", failedFile);
-// xhr.open("GET", "songxhr.json");
-// xhr.send();
+var xhr = new XMLHttpRequest();
 
-// function loadedFile(){
-// 	console.log("file loaded");
-// 	var firstList = JSON.parse(xhr.responseText);
-// 	applyInfo(firstList);
-// }
 
-// function failedFile(){
-// 	console.log("file failed");
-// }
+xhr.addEventListener("load", loadedFile);
+xhr.addEventListener("failed", failedFile);
+xhr.open("GET", "songxhr.json");
+xhr.send();
 
-// var secondxhr = new XMLHttpRequest();
-// secondxhr.addEventListener("load", console.log("loaded"));
-// secondxhr.addEventListener("failed", failedFile);
-// secondxhr.open("GET", "songsxhr2.json");
-// secondxhr.send();
+function loadedFile(){
+	var firstList = JSON.parse(xhr.responseText);
+	applyInfo(firstList);
+}
 
-// var moreButt = document.getElementById("more");
-// moreButt.addEventListener("click", moreButton);
+function failedFile(){
+	console.log("file failed");
+}
 
-// function moreButton (){
-// 	var secondList = JSON.parse(secondxhr.responseText);
-// 	applyInfo(secondList);
-// }
+var secondxhr = new XMLHttpRequest();
+secondxhr.addEventListener("load", console.log("loaded"));
+secondxhr.addEventListener("failed", failedFile);
+secondxhr.open("GET", "songsxhr2.json");
+secondxhr.send();
+
+var moreButt = document.getElementById("more");
+moreButt.addEventListener("click", moreButton);
+
+function moreButton (){
+	var secondList = JSON.parse(secondxhr.responseText);
+	applyInfo(secondList);
+}
 
 var songInfo = document.getElementById("songList");
 
@@ -78,13 +77,13 @@ function applyInfo (object){
 
 	}
 }
-function userEntry(){
 var userAdds = {};
 var tune = document.getElementById("song");
 var band = document.getElementById("artist");
 var disc = document.getElementById("album");
 var addButt = document.getElementById("addit");
 
+function userEntry(){
 addButt.addEventListener("click", function(){
 	var music = [];
 	var obj = {};
@@ -97,12 +96,13 @@ addButt.addEventListener("click", function(){
 	band.value = "";
 	disc.value = "";
 	applyInfo(userAdds);
+	console.log("adding", obj);
 });
 }
 
 module.exports = loadedFile, moreButton, userEntry;
 
-
+console.log("loader");
 
 
 // one method for getting the entire list of songs, and one method for adding a song to the array
