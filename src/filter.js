@@ -9,47 +9,43 @@ var allartists = [];
 
 	$("#filter").click(menuSelect);
 
-	var artpick = $("#artistlist option:selected").val();
-	var albpick = $("#albumlist option:selected").text();
-	var artistinfo = $("artistinfo");
-	var albumnames = $('.albuminfo');
+	function menuSelect (){
+		var artpick = $("#artistlist option:selected").val();
+		var albpick = $("#albumlist option:selected").text();
+		var artistinfo = $(".musicinfo").map(function(){
+			return $(this).text();
+		});
 		// this returns all text smashed together in array"
 		console.log(artistinfo);
 
+		var test = $('.albuminfo');
 		// this works with albuminfo, but only for that class
-	function menuSelect (){
-		console.log('this is a thing', albumnames.html());
-		if (artpick === 0){
-			for (var i = 0; i < albumnames.length; i++) {
-				var inneralbum = albumnames[i].innerHTML;
-				var daddy = $(inneralbum).closest(".musicinfo")
-					console.log('hello', inneralbum, albpick, daddy);
-				if (inneralbum === albpick) {
-					$(albumnames[i]).closest(".cards").addClass("active");
-					$(albumnames[i]).closest(".cards").removeClass("inactive")
-					console.log("good");
-				} else {
-					$(albumnames[i]).closest(".cards").addClass("inactive");
-					$(albumnames[i]).closest(".cards").removeClass("active")
-				}
-			}	
-		}	
-		if (albpick === 0){
-			for (var i = 0; i < artistinfo.length; i++) {
-				var innerartist = artistinfo[i].innerHTML;
-				var mommy = $(innerartist).closest(".musicinfo")
-					console.log('hello', innerartist, artpick, mommy);
-				if (innerartist === artpick) {
-					$(artistinfo[i]).closest(".cards").addClass("active");
-					$(artistinfo[i]).closest(".cards").removeClass("inactive")
-					console.log("good");
-				} else {
-					$(artistinfo[i]).closest(".cards").addClass("inactive");
-					$(artistinfo[i]).closest(".cards").removeClass("active")
-				}
+		console.log('this is a thing', test.html());
+
+		for (var i = 0; i < test.length; i++) {
+			var whatever = test[i].innerHTML;
+			var daddy = $(whatever).closest(".musicinfo")
+				console.log('hello', whatever, albpick, daddy);
+			if (whatever === albpick) {
+				$(test[i]).closest(".cards").addClass("active");
+				$(test[i]).closest(".cards").removeClass("inactive")
+				console.log("good");
+			} else {
+				$(test[i]).closest(".cards").addClass("inactive");
+				$(test[i]).closest(".cards").removeClass("active")
 			}
 		}
-		
+		// if (albpick) {}
+
+		// // var albuminfo = $(".musicinfo").text();
+		// var selection = $(".musicinfo").find(albpick);
+		// console.log("select", selection);
+		// for (var match in albuminfo){
+		// 	console.log("artist", artpick, albuminfo);
+
+		// 	if (match === artpick){
+		// 		console.log("match");
+
 
 
 

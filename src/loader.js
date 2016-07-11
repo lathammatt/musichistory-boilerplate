@@ -31,7 +31,7 @@ function applyInfo (object){
 
 		var status = document.createAttribute('class');
 		status.value = "active";
-		status.value = "musicinfo"
+		status.value = "musicinfo";
 		newDiv.setAttributeNode(status);
 
 		var deleDiv = document.getElementById("card-" + [counter]);
