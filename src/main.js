@@ -13,4 +13,3 @@ let MusicPage = {
 
 module.exports = MusicPage;
 
-console.log("main");
