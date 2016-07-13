@@ -1,0 +1,37 @@
+@import 'header';
+@import 'fieldset';
+@import 'hidden';
+@import 'classes';
+@import 'newbox';
+
+.main {
+	width: 70%;
+	margin: auto;
+}
+
+label {
+	display: block;
+}
+
+h2 {
+	color: #785616;
+}
+
+li {
+	list-style-type: none;
+}
+
+
+button {
+	margin: 15px 35px 15px 35px;
+	padding: 0 35px;
+	text-align: center;
+}
+
+#more {
+	float: right;
+	padding: 7px;
+	margin: 5px;
+}
+
+
