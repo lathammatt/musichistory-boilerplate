@@ -1,0 +1,26 @@
+.newbox {
+	background-color: lightgreen;
+	width: 350px;
+	margin: auto;
+	border: 1px solid black;
+
+}
+
+.newbox input {
+	display: block;
+	border: 1px solid black;
+	padding: 0 0 0 15px;
+	margin: 10px auto;
+}
+
+.newbox label {
+	display: block;
+	padding: 0 0 0 150px;
+	margin: 10px auto;
+}
+
+.newbox button {
+	margin: 15px 35px 15px 125px;
+	padding: 0 auto;
+	text-align: center;
+}

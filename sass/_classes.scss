@@ -1,0 +1,48 @@
+
+.options {
+	background-color: #4DD7FA;
+	width: 30%;
+	border: 1px solid black;
+	margin: 0 1px 0 0;
+	float: left;
+}
+
+.songs {
+	float:right;
+	width: 67%;
+	margin: 0 0 0 0;
+	background-color: #FEFAC0;
+	border: 1px solid black;
+}
+
+.artistinfo {
+	display: inline;
+	padding: 0 0 0 5px;
+	margin: 0 2.5px;
+}
+
+.albuminfo {
+	display: inline;
+	border-left: 2px solid black;
+	padding: 0 0 0 5px;
+	margin: 0 2.5px;
+}
+
+.infolist:nth-child(2){
+	border: none;
+}
+
+.checks {
+	width: 50%;
+	float: left;
+}
+
+.checks2 {
+	width: 50%;
+	float: right;
+}
+
+.internal {
+	width:100%;
+	margin: 5px 0;
+}

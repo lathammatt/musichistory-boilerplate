@@ -19,25 +19,25 @@ $(document).ready(function() {
 
 			for (var i = 0; i < artistinfo.length; i++) {
 				var innerartist = artistinfo[i].innerHTML;
-				var daddy = $(innerartist).closest(".musicinfo")
+				// var daddy = $(innerartist).closest(".musicinfo")
 				if (innerartist === artpick) {
 					$(artistinfo[i]).closest(".cards").addClass("active");
-					$(artistinfo[i]).closest(".cards").removeClass("inactive")
+					$(artistinfo[i]).closest(".cards").removeClass("inactive");
 				} else {
 					$(artistinfo[i]).closest(".cards").addClass("inactive");
-					$(artistinfo[i]).closest(".cards").removeClass("active")
+					$(artistinfo[i]).closest(".cards").removeClass("active");
 					}
 				}
 		} else if (artpick === "All Artists" && albpick !== "All Albums"){
 			for (var i = 0; i < albuminfo.length; i++) {
 				var inneralbum = albuminfo[i].innerHTML;
-				var daddy = $(inneralbum).closest(".musicinfo")
+				// var mommy = $(inneralbum).closest(".musicinfo")
 				if (inneralbum === albpick) {
 					$(albuminfo[i]).closest(".cards").addClass("active");
-					$(albuminfo[i]).closest(".cards").removeClass("inactive")
+					$(albuminfo[i]).closest(".cards").removeClass("inactive");
 				} else {
 					$(albuminfo[i]).closest(".cards").addClass("inactive");
-					$(albuminfo[i]).closest(".cards").removeClass("active")
+					$(albuminfo[i]).closest(".cards").removeClass("active");
 					}
 				}			
 		} else {}

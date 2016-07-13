@@ -1,0 +1,116 @@
+header {
+  background-color: #ffb4b0;
+  border: 1px solid black;
+  margin: 10px 0px; }
+  header ul li {
+    display: inline;
+    border-left: 2px solid black;
+    padding: 0 0 0 5px;
+    margin: 0 2.5px; }
+
+header li:first-child {
+  border: none; }
+
+fieldset {
+  border: none;
+  margin: 7px 0 0 0; }
+  fieldset-input {
+    margin: 2px 0 2px 0;
+    padding: 2px 0; }
+
+.hidden {
+  display: none; }
+
+.visible {
+  display: block; }
+
+.inactive {
+  display: none; }
+
+.active {
+  display: block; }
+
+.options {
+  background-color: #4DD7FA;
+  width: 30%;
+  border: 1px solid black;
+  margin: 0 1px 0 0;
+  float: left; }
+
+.songs {
+  float: right;
+  width: 67%;
+  margin: 0 0 0 0;
+  background-color: #FEFAC0;
+  border: 1px solid black; }
+
+.artistinfo {
+  display: inline;
+  padding: 0 0 0 5px;
+  margin: 0 2.5px; }
+
+.albuminfo {
+  display: inline;
+  border-left: 2px solid black;
+  padding: 0 0 0 5px;
+  margin: 0 2.5px; }
+
+.infolist:nth-child(2) {
+  border: none; }
+
+.checks {
+  width: 50%;
+  float: left; }
+
+.checks2 {
+  width: 50%;
+  float: right; }
+
+.internal {
+  width: 100%;
+  margin: 5px 0; }
+
+.newbox {
+  background-color: lightgreen;
+  width: 350px;
+  margin: auto;
+  border: 1px solid black; }
+
+.newbox input {
+  display: block;
+  border: 1px solid black;
+  padding: 0 0 0 15px;
+  margin: 10px auto; }
+
+.newbox label {
+  display: block;
+  padding: 0 0 0 150px;
+  margin: 10px auto; }
+
+.newbox button {
+  margin: 15px 35px 15px 125px;
+  padding: 0 auto;
+  text-align: center; }
+
+.main {
+  width: 70%;
+  margin: auto; }
+
+label {
+  display: block; }
+
+h2 {
+  color: #785616; }
+
+li {
+  list-style-type: none; }
+
+button {
+  margin: 15px 35px 15px 35px;
+  padding: 0 35px;
+  text-align: center; }
+
+#more {
+  float: right;
+  padding: 7px;
+  margin: 5px; }
