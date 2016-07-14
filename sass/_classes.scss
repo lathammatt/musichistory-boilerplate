@@ -1,8 +1,10 @@
 
+$border: 1px solid black;
+
 .options {
 	background-color: #4DD7FA;
 	width: 30%;
-	border: 1px solid black;
+	border: $border;
 	margin: 0 1px 0 0;
 	float: left;
 }
@@ -12,7 +14,7 @@
 	width: 67%;
 	margin: 0 0 0 0;
 	background-color: #FEFAC0;
-	border: 1px solid black;
+	border: $border;
 }
 
 .artistinfo {

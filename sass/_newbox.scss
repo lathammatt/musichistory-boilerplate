@@ -1,14 +1,18 @@
+
+
+$border: 1px solid black;
+
 .newbox {
 	background-color: lightgreen;
 	width: 350px;
 	margin: auto;
-	border: 1px solid black;
+	border: $border;
 
 }
 
 .newbox input {
 	display: block;
-	border: 1px solid black;
+	border: $border;
 	padding: 0 0 0 15px;
 	margin: 10px auto;
 }
