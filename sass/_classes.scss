@@ -3,21 +3,17 @@ $border: 1px solid black;
 
 
 .main {
-	width: 70%;
 	margin: auto;
 }
 
 .options {
 	background-color: #4DD7FA;
-	width: 30%;
 	border: $border;
-	margin: 0 1px 0 0;
 	float: left;
+	height: 371px;
 }
 
 .songs {
-	float:right;
-	width: 67%;
 	margin: 0 0 0 0;
 	background-color: #FEFAC0;
 	border: $border;
@@ -43,4 +39,9 @@ $border: 1px solid black;
 .internal {
 	width:100%;
 	margin: 5px 0;
+}
+
+.row.no-gutter {
+  margin-left: 0;
+  margin-right: 0;
 }
