@@ -4,73 +4,77 @@
 <head>
   <meta charset="utf-8">
   <title>Music History</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
   <link rel="stylesheet" href="css/main.css">
+
 </head>
 
 <body>
-    <div class="main">
-        <header>
-            <ul>
-                <li><a href="#" id="link-home">List Music</a></li>
-                <li><a href="#" id="link-add">Add Music</a></li>
-                <li><a href="#" id="link-profile">Profile</a></li>
-            </ul>
-        </header>
-        <section id="list-view" class="">
-            <div class="options">
-                <fieldset>
-                    <legend>Song Length:</legend>
-                        <input type="range" name="songlength" min="30" max="300" step="5" value="150" placeholder="">
-                </fieldset>
-                <fieldset class="artistalbum">
-                    <label for="artist">Artist:</label>
-                    <select name="artist" id="artistlist" class="art">
-                    <option value="value">All Artists</option>
-                    </select>
-                </fieldset>
-                <fieldset class="artistalbum">
-                    <label for="album">or Album:</label>
-                    <select name="album" id="albumlist" class="al">
-                        <option value="value">All Albums</option>
-                    </select>
-                </fieldset>
-                <fieldset class="artistalbum">
-            
-                    <label for="genre">Genre:</label>
+    <div class="container-fluid">
+        <div class="main">
+            <header class="col-md-8 col-md-offset-2 row">
+                <ul>
+                    <li><a href="#" id="link-home">List Music</a></li>
+                    <li><a href="#" id="link-add">Add Music</a></li>
+                    <li><a href="#" id="link-profile">Profile</a></li>
+                </ul>
+            </header>
+            <section id="list-view" class="row no-gutter">
+                <div class="options col-md-3 col-md-offset-2">
+                    <fieldset>
+                        <legend>Song Length:</legend>
+                            <input type="range" name="songlength" min="30" max="300" step="5" value="150" placeholder="">
+                    </fieldset>
+                    <fieldset class="artistalbum">
+                        <label for="artist">Artist:</label>
+                        <select name="artist" id="artistlist" class="art">
+                        <option value="value">All Artists</option>
+                        </select>
+                    </fieldset>
+                    <fieldset class="artistalbum">
+                        <label for="album">or Album:</label>
+                        <select name="album" id="albumlist" class="al">
+                            <option value="value">All Albums</option>
+                        </select>
+                    </fieldset>
+                    <fieldset class="artistalbum">
+                
+                        <label for="genre">Genre:</label>
 
-            <script id="genredata" type="text/x-handlebars-template">
-                {{#each tags}}
-                <div class="internal">
-                    <input type="checkbox" name="genre" value="{{name}}">{{name}}
-                {{/each}}   
-                </div> 
-            </script>
-                    <div id="checks">
-                    </div>
-                    <div id="checks2">
-                    </div>
-                </fieldset>
-                <fieldset>
-                    <button type="submit" id="filter"><h3>Filter</h3></button>
-                </fieldset>
-            </div>
-            <div class="songs" id = "songList">
+                <script id="genredata" type="text/x-handlebars-template">
+                    {{#each tags}}
+                    <div class="internal">
+                        <input type="checkbox" name="genre" value="{{name}}">{{name}}
+                    {{/each}}   
+                    </div> 
+                </script>
+                        <div id="checks">
+                        </div>
+                        <div id="checks2">
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <button type="submit" id="filter"><h3>Filter</h3></button>
+                    </fieldset>
+                </div>
+                <div class="songs col-md-5" id="songList">
 
 
-                <button type="select" id="more">More</button>
-            </div>
-        </section>
-        <section id="add-view" class="hidden">
-            <div class="newbox">
-                <label for="">Song</label>
-                <input type="text" name="song" id="song" value="" placeholder="">
-                <label for="">Artist</label>
-                <input type="text" name="artist" id="artist" value="" placeholder="">
-                <label for="">Album</label>
-                <input type="text" name="album" id="album" value="" placeholder="">
-                <button type="submit" id="addit">Add</button>
-            </div>
-        </section>
+                    <button type="select" id="more">More</button>
+                </div>
+            </section>
+            <section id="add-view" class="hidden">
+                <div class="newbox">
+                    <label for="">Song</label>
+                    <input type="text" name="song" id="song" value="" placeholder="">
+                    <label for="">Artist</label>
+                    <input type="text" name="artist" id="artist" value="" placeholder="">
+                    <label for="">Album</label>
+                    <input type="text" name="album" id="album" value="" placeholder="">
+                    <button type="submit" id="addit">Add</button>
+                </div>
+            </section>
+        </div>    
     </div>    
     <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
     <script type="text/javascript" src="bower_components/handlebars/handlebars.min.js"></script>

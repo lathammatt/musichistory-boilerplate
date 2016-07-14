@@ -1,7 +1,8 @@
 header {
   background-color: #ffb4b0;
   border: 1px solid black;
-  margin: 10px 0px; }
+  margin: 10px 0 0 0;
+  height: 40px; }
   header ul li {
     display: inline;
     border-left: 2px solid black;
@@ -31,19 +32,15 @@ fieldset {
   display: block; }
 
 .main {
-  width: 70%;
   margin: auto; }
 
 .options {
   background-color: #4DD7FA;
-  width: 30%;
   border: 1px solid black;
-  margin: 0 1px 0 0;
-  float: left; }
+  float: left;
+  height: 371px; }
 
 .songs {
-  float: right;
-  width: 67%;
   margin: 0 0 0 0;
   background-color: #FEFAC0;
   border: 1px solid black; }
@@ -65,6 +62,10 @@ fieldset {
 .internal {
   width: 100%;
   margin: 5px 0; }
+
+.row.no-gutter {
+  margin-left: 0;
+  margin-right: 0; }
 
 .newbox {
   background-color: lightgreen;
