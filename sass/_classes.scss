@@ -1,6 +1,12 @@
 
 $border: 1px solid black;
 
+
+.main {
+	width: 70%;
+	margin: auto;
+}
+
 .options {
 	background-color: #4DD7FA;
 	width: 30%;
@@ -32,16 +38,6 @@ $border: 1px solid black;
 
 .infolist:nth-child(2){
 	border: none;
-}
-
-.checks {
-	width: 50%;
-	float: left;
-}
-
-.checks2 {
-	width: 50%;
-	float: right;
 }
 
 .internal {

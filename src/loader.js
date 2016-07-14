@@ -40,6 +40,8 @@ function applyInfo (object){
 			songInfo.removeChild(cardtodelete);
 		});
 
+		// ///////// Select Option Fill /////////
+
 		var artistList = document.getElementById("artistlist");
 		var aroption = document.createElement("option");
 		aroption.text = `${object.songs[i].artist}`;
@@ -57,6 +59,8 @@ function applyInfo (object){
 	}
 }
 
+
+// ////////// Add New Music Logic ////////////
 
 var userAdds = {};
 var tune = document.getElementById("song");
@@ -79,7 +83,32 @@ addButt.addEventListener("click", function(){
 });
 });
 
+////////////// Handlebars for genre checkbox///////
 
+var genres = {
+	names: [
+	{name: "Rock"},
+	{name: "Pop"},
+	{name: "Blues"}
+]
+};
 
+var genres2 = {
+	names: [
+	{name: "Classical"},
+	{name: "Jazz"},
+	{name: "Rap"}
+]
+};
+
+var genreHTML = $("#genredata").html();
+
+var genreTemplate = Handlebars.compile(genreHTML);
+
+var genreOutput = genreTemplate(genres);
+var genre2Output = genreTemplate(genres2);
+
+$("#checks").append(genreOutput);
+$("#checks2").append(genre2Output);
 
 
