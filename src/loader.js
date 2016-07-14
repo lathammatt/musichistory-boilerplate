@@ -86,7 +86,7 @@ addButt.addEventListener("click", function(){
 ////////////// Handlebars for genre checkbox///////
 
 var genres = {
-	names: [
+	tags: [
 	{name: "Rock"},
 	{name: "Pop"},
 	{name: "Blues"}
@@ -94,7 +94,7 @@ var genres = {
 };
 
 var genres2 = {
-	names: [
+	tags: [
 	{name: "Classical"},
 	{name: "Jazz"},
 	{name: "Rap"}
