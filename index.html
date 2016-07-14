@@ -35,16 +35,19 @@
                     </select>
                 </fieldset>
                 <fieldset class="artistalbum">
+            
                     <label for="genre">Genre:</label>
-                    <div class="checks">
-                        <div class="internal"><input type="checkbox" name="genre" value="Rock">Rock</div>
-                        <div class="internal"><input type="checkbox" name="genre" value="Pop">Pop</div>
-                        <div class="internal"><input type="checkbox" name="genre" value="Blues">Blues</div>
+
+            <script id="genredata" type="text/x-handlebars-template">
+                {{#each names}}
+                <div class="internal">
+                    <input type="checkbox" name="genre" value="{{name}}">{{name}}
+                {{/each}}   
+                </div> 
+            </script>
+                    <div id="checks">
                     </div>
-                    <div class="checks2">
-                        <div class="internal"><input type="checkbox" name="genre" value="Classical">Classical</div>
-                        <div class="internal"><input type="checkbox" name="genre" value="Jazz">Jazz</div>
-                        <div class="internal"><input type="checkbox" name="genre" value="Hip Hop">Hip Hop</div>
+                    <div id="checks2">
                     </div>
                 </fieldset>
                 <fieldset>
@@ -52,7 +55,9 @@
                 </fieldset>
             </div>
             <div class="songs" id = "songList">
-                <button type="select" id="more">More > </button>
+
+
+                <button type="select" id="more">More</button>
             </div>
         </section>
         <section id="add-view" class="hidden">
@@ -68,6 +73,7 @@
         </section>
     </div>    
     <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+    <script type="text/javascript" src="bower_components/handlebars/handlebars.min.js"></script>
     <script src="/dist/bundle.js" type="text/javascript" charset="utf-8" async defer></script>
 </body>
 </html>
