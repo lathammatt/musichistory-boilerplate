@@ -1,5 +1,5 @@
 
-$border: 1px solid black;
+$border: 2px solid black;
 
 
 .main {
@@ -8,15 +8,23 @@ $border: 1px solid black;
 
 .options {
 	background-color: #4DD7FA;
-	border: $border;
 	float: left;
-	height: 371px;
+	height: 380px;
+	border-left: $border;
+	border-bottom: $border;
+
 }
 
 .songs {
 	margin: 0 0 0 0;
 	background-color: #FEFAC0;
-	border: $border;
+	border-right: $border;
+	border-left: $border;
+	border-bottom: $border;
+}
+
+.cards {
+	height: 88px;
 }
 
 .artistinfo {
