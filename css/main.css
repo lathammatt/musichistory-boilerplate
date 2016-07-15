@@ -1,6 +1,6 @@
 header {
   background-color: #ffb4b0;
-  border: 1px solid black;
+  border: 2px solid black;
   margin: 10px 0 0 0;
   height: 40px; }
   header ul li {
@@ -36,14 +36,20 @@ fieldset {
 
 .options {
   background-color: #4DD7FA;
-  border: 1px solid black;
   float: left;
-  height: 371px; }
+  height: 380px;
+  border-left: 2px solid black;
+  border-bottom: 2px solid black; }
 
 .songs {
   margin: 0 0 0 0;
   background-color: #FEFAC0;
-  border: 1px solid black; }
+  border-right: 2px solid black;
+  border-left: 2px solid black;
+  border-bottom: 2px solid black; }
+
+.cards {
+  height: 88px; }
 
 .artistinfo {
   display: inline;
@@ -98,15 +104,12 @@ h2 {
 li {
   list-style-type: none; }
 
-button {
-  margin: 15px 35px 15px 35px;
-  padding: 0 35px;
-  text-align: center; }
-
 #more {
-  float: right;
-  padding: 7px;
-  margin: 5px; }
+  margin: 10px 43%;
+  align: center; }
+
+#listbottom {
+  background-color: #FEFAC0; }
 
 #checks {
   width: 50%;
