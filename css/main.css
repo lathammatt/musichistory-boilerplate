@@ -8,6 +8,8 @@ header {
     border-left: 2px solid black;
     padding: 0 0 0 5px;
     margin: 0 2.5px; }
+  header ul {
+    margin: 7px 0 0 0; }
 
 header li:first-child {
   border: none; }
@@ -50,6 +52,10 @@ fieldset {
 
 .cards {
   height: 88px; }
+
+.delete {
+  margin: 10px;
+  float: right; }
 
 .artistinfo {
   display: inline;
