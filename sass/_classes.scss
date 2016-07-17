@@ -1,6 +1,12 @@
 
 $border: 2px solid black;
 
+@media (min-width: @screen-sm-min){
+	.options {
+		border-right: $border;
+	}
+}
+
 
 .main {
 	margin: auto;
@@ -30,7 +36,7 @@ $border: 2px solid black;
 .delete {
 	margin: 10px;
 	float: right;
-	
+
 }
 
 .artistinfo {
