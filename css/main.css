@@ -101,10 +101,6 @@ fieldset {
   padding: 0 auto;
   text-align: center; }
 
-@media (max-width: 768px) {
-  .options {
-    border-right: 2px solid black; } }
-
 label {
   display: block; }
 
@@ -118,8 +114,7 @@ legend {
   border: none; }
 
 #more {
-  margin: 10px 43%;
-  align: center; }
+  margin: 10px 43%; }
 
 #listbottom {
   background-color: #FEFAC0; }
@@ -137,4 +132,10 @@ legend {
     margin: 4px 7px; }
 
 #filter {
-  margin: 5% 0 0 33%; }
+  margin: 5% 0 0 31%; }
+
+@media (max-width: 768px) {
+  .options {
+    border-right: 2px solid black; }
+  #filter {
+    margin: 5% 0 0 41%; } }

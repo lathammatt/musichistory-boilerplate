@@ -4,11 +4,6 @@
 @import 'classes';
 @import 'newbox';
 
-@media (max-width: 768px){
-	.options{
-		border-right: 2px solid black;
-	}
-}
 
 
 label {
@@ -31,7 +26,6 @@ legend {
 
 #more {
 	margin: 10px 43%;
-	align: center;
 }
 
 #listbottom {
@@ -57,6 +51,15 @@ legend {
 }
 
 #filter {
-	margin: 5% 0 0 33%;
+	margin: 5% 0 0 31%;
 }
 
+@media (max-width: 768px){
+	.options{
+		border-right: 2px solid black;
+	}
+
+	#filter {
+		margin: 5% 0 0 41%;
+	}
+}
