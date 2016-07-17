@@ -110,6 +110,9 @@ h2 {
 li {
   list-style-type: none; }
 
+legend {
+  border: none; }
+
 #more {
   margin: 10px 43%;
   align: center; }
@@ -120,7 +123,14 @@ li {
 #checks {
   width: 50%;
   float: left; }
+  #checks input {
+    margin: 4px 7px; }
 
 #checks2 {
   width: 50%;
   float: right; }
+  #checks2 input {
+    margin: 4px 7px; }
+
+#filter {
+  margin: 5% 0 0 33%; }
