@@ -101,6 +101,10 @@ fieldset {
   padding: 0 auto;
   text-align: center; }
 
+@media (max-width: 768px) {
+  .options {
+    border-right: 2px solid black; } }
+
 label {
   display: block; }
 
