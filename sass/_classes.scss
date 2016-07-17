@@ -1,12 +1,6 @@
 
 $border: 2px solid black;
 
-@media (min-width: @screen-sm-min){
-	.options {
-		border-right: $border;
-	}
-}
-
 
 .main {
 	margin: auto;
@@ -18,7 +12,6 @@ $border: 2px solid black;
 	height: 380px;
 	border-left: $border;
 	border-bottom: $border;
-
 }
 
 .songs {

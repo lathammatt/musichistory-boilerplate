@@ -4,7 +4,11 @@
 @import 'classes';
 @import 'newbox';
 
-
+@media (max-width: 768px){
+	.options{
+		border-right: 2px solid black;
+	}
+}
 
 
 label {
