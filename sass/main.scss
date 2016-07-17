@@ -18,7 +18,9 @@ h2 {
 li {
 	list-style-type: none;
 }
-
+legend {
+	border: none;
+}
 
 
 
@@ -35,10 +37,22 @@ li {
 #checks {
 	width: 50%;
 	float: left;
+
+	input {
+		margin: 4px 7px;
+	}
 }
 
 #checks2 {
 	width: 50%;
 	float: right;
+
+	input {
+		margin: 4px 7px;
+	}	
+}
+
+#filter {
+	margin: 5% 0 0 33%;
 }
 
