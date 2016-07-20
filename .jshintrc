@@ -1,0 +1,15 @@
+{
+  "predef": [ "document", "console", "angular", "browserify" ],
+  "esversion": 6,
+  "globalstrict": true,
+  "curly": true,
+  "eqeqeq": true,
+  "undef": true,
+  "unused": true,
+  "globals": { 
+  	"$": true,
+  	"browserify": true,
+  	"require": true,
+  	"module": true,
+  	"Handlebars": true }
+}

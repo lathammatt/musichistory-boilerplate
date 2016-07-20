@@ -1,13 +1,15 @@
 "use strict";
 
-const load = require("./loader");
-const view = require("./pageview");
-const filter = require("./filter");
+const load = require("./loader"),
+	view = require("./pageview"),
+	filter = require("./filter");
+	// angie = require(".angularchanges");
 
 let MusicPage = {
 	load,
 	view,
-	filter
+	filter,
+	// angie
 };
 
 

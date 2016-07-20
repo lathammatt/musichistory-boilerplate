@@ -12,11 +12,13 @@ $("#more").click(moreButton);
 
 
 var songInfo = document.getElementById("songList");
-
+// var test = null;
 var counter = 0;
 
 function applyInfo (object){
 	for (var i = 0; i < object.songs.length; i++){
+		// test = object;
+		// console.log("test2", test);
 		counter++;
 		var songbox = `<div class="cards"><ul><li><h2>${object.songs[i].title} </h2></li><li class='artistinfo infolist'>${object.songs[i].artist}</li><li class='albuminfo infolist'>${object.songs[i].album}</li><button id="card-${counter}" class="delete btn btn-default btn-xs">Delete</button></div>`;
 
@@ -42,19 +44,19 @@ function applyInfo (object){
 
 		// ///////// Select Option Fill /////////
 
-		var artistList = document.getElementById("artistlist");
-		var aroption = document.createElement("option");
-		aroption.text = `${object.songs[i].artist}`;
-		aroption.value = `"${object.songs[i].artist}"`;
+		// var artistList = document.getElementById("artistlist");
+		// var aroption = document.createElement("option");
+		// aroption.text = `${object.songs[i].artist}`;
+		// aroption.value = `"${object.songs[i].artist}"`;
 
-		artistList.appendChild(aroption);
+		// artistList.appendChild(aroption);
 
-		var albumList = document.getElementById("albumlist");
-		var aloption = document.createElement("option");
-		aloption.text = `${object.songs[i].album}`;
-		aloption.value = `"${object.songs[i].album}"`;
+		// var albumList = document.getElementById("albumlist");
+		// var aloption = document.createElement("option");
+		// aloption.text = `${object.songs[i].album}`;
+		// aloption.value = `"${object.songs[i].album}"`;
 
-		albumList.appendChild(aloption);
+		// albumList.appendChild(aloption);
 
 	}
 }
