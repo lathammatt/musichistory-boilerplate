@@ -37,6 +37,7 @@
                         <label for="album">or Album:</label>
                         <select name="album" id="albumlist" class="al">
                             <option value="value">All Albums</option>
+                            <option ng-repeat="option in selectData" value="{{option.album}}">{{option.album}}</option>
                         </select>
                     </fieldset>
                     <fieldset class="artistalbum">
