@@ -30,7 +30,7 @@ $(document).ready(function() {
 				}
 		} else if (artpick === "All Artists" && albpick !== "All Albums"){
 			for (var j = 0; j < albuminfo.length; j++) {
-				var inneralbum = albuminfo[i].innerHTML;
+				var inneralbum = albuminfo[j].innerHTML;
 				// var mommy = $(inneralbum).closest(".musicinfo")
 				if (inneralbum === albpick) {
 					$(albuminfo[j]).closest(".cards").addClass("active");

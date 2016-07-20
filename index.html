@@ -9,7 +9,7 @@
 
 </head>
 
-<body ng-controller="musicApp">
+<body ng-app="musicApp">
     <div class="container-fluid">
         <div class="main">
             <header class="col-xs-8 col-xs-offset-2 row">
@@ -21,6 +21,7 @@
             </header>
             <section id="list-view" class="row no-gutter">
                 <div class="options col-xs-8 col-sm-3 col-xs-offset-2" ng-controller="selectApp">
+               
                     <fieldset>
                         <legend>Song Length:</legend>
                             <input type="range" name="songlength" min="30" max="300" step="5" value="150" placeholder="">
@@ -29,6 +30,7 @@
                         <label for="artist">Artist:</label>
                         <select name="artist" id="artistlist" class="art">
                         <option value="value">All Artists</option>
+                        <option ng-repeat="option in selectData" value="{{option.artist}}">{{option.artist}}</option>
                         </select>
                     </fieldset>
                     <fieldset class="artistalbum">
@@ -80,6 +82,7 @@
     <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
     <script type="text/javascript" src="bower_components/handlebars/handlebars.min.js"></script>
     <script src="bower_components/angular/angular.min.js"></script>
-    <script src="/dist/bundle.js" type="text/javascript" charset="utf-8" async defer></script>
+    <script src="/dist/bundle.js"></script>
+    <script src="/src/angularchanges.js"></script>
 </body>
 </html>
