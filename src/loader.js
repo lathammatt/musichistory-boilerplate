@@ -12,11 +12,14 @@ $("#more").click(moreButton);
 
 
 var songInfo = document.getElementById("songList");
-
+var test = null;
+console.log("test", test);
 var counter = 0;
 
 function applyInfo (object){
 	for (var i = 0; i < object.songs.length; i++){
+		test = object;
+		console.log("test2", test);
 		counter++;
 		var songbox = `<div class="cards"><ul><li><h2>${object.songs[i].title} </h2></li><li class='artistinfo infolist'>${object.songs[i].artist}</li><li class='albuminfo infolist'>${object.songs[i].album}</li><button id="card-${counter}" class="delete btn btn-default btn-xs">Delete</button></div>`;
 

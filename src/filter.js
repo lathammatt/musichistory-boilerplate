@@ -1,7 +1,7 @@
 "use strict";
 
 
-const load = require ("./loader.js");
+// const load = require ("./loader.js");
 
 
 $(document).ready(function() {
@@ -13,7 +13,7 @@ $(document).ready(function() {
 		var albpick = $("#albumlist option:selected").text();
 		var artistinfo = $('.artistinfo');
 		var albuminfo = $('.albuminfo');
-		var infolist = $('.infolist');
+		// var infolist = $('.infolist');
 
 		if (artpick !== "All Artists" && albpick === "All Albums"){
 
@@ -29,15 +29,15 @@ $(document).ready(function() {
 					}
 				}
 		} else if (artpick === "All Artists" && albpick !== "All Albums"){
-			for (var i = 0; i < albuminfo.length; i++) {
+			for (var j = 0; j < albuminfo.length; j++) {
 				var inneralbum = albuminfo[i].innerHTML;
 				// var mommy = $(inneralbum).closest(".musicinfo")
 				if (inneralbum === albpick) {
-					$(albuminfo[i]).closest(".cards").addClass("active");
-					$(albuminfo[i]).closest(".cards").removeClass("inactive");
+					$(albuminfo[j]).closest(".cards").addClass("active");
+					$(albuminfo[j]).closest(".cards").removeClass("inactive");
 				} else {
-					$(albuminfo[i]).closest(".cards").addClass("inactive");
-					$(albuminfo[i]).closest(".cards").removeClass("active");
+					$(albuminfo[j]).closest(".cards").addClass("inactive");
+					$(albuminfo[j]).closest(".cards").removeClass("active");
 					}
 				}			
 		} else {}
